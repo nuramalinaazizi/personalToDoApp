@@ -13,6 +13,18 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { getStorage } from 'firebase/storage';
 import { provideStorage } from '@angular/fire/storage';
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyClohHqqCNMK3A_sY-RpF48Z9ZIpfdj5hs",
+  authDomain: "ionic-app-2b94b.firebaseapp.com",
+  projectId: "ionic-app-2b94b",
+  storageBucket: "ionic-app-2b94b.appspot.com",
+  messagingSenderId: "942549969568",
+  appId: "1:942549969568:web:64221b82f991896f8f37c5",
+  measurementId: "G-H3QLJLES1S"
+};
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
@@ -26,19 +38,3 @@ import { provideStorage } from '@angular/fire/storage';
 })
 
 export class AppModule { }
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyClohHqqCNMK3A_sY-RpF48Z9ZIpfdj5hs",
-  authDomain: "ionic-app-2b94b.firebaseapp.com",
-  projectId: "ionic-app-2b94b",
-  storageBucket: "ionic-app-2b94b.appspot.com",
-  messagingSenderId: "942549969568",
-  appId: "1:942549969568:web:64221b82f991896f8f37c5",
-  measurementId: "G-H3QLJLES1S"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
