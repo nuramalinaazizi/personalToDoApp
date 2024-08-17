@@ -28,5 +28,16 @@ export class LoginPage implements OnInit {
     });
   }
 
+  async resetPressed() {
+    if (this.email != "") {
+      await this.authService.resetPassword(this.email)
+     
+      // TODO : Redirect to login page
+      // TODO : Show a toast
+      console.log("Reset email successfully sent")
+    }
+  }
+ 
+
 
 }

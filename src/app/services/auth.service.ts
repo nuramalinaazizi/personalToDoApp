@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from '@angular/fire/auth';
+import {
+  Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, sendPasswordResetEmail
+} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +27,8 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
 
+  resetPassword(email: string) {
+    return sendPasswordResetEmail(this.auth, email)
+  }
 
 }
