@@ -37,7 +37,4 @@ export class LoginPage implements OnInit {
       console.log("Reset email successfully sent")
     }
   }
- 
-
-
 }
