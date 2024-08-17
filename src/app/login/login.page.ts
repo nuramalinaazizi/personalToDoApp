@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
   login() {
     this.authService.signIn(this.email, this.password).then((userCredential) => {
       console.log('User logged in:', userCredential);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/todo']);
 
     }).catch((error) => {
       console.error('Login error:', error);
